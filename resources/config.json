@@ -1,0 +1,82 @@
+{
+    "permitted": [
+        "sogerr"
+    ],
+    "channels": [
+        "#sogerr"
+    ],
+    "severity": {
+        "0": "ban",
+        "1": 3600,
+        "2": 600,
+        "3": 5
+    },
+    "cooldown": 30,
+    "client": {
+        "chat": {
+            "options": {
+                "debug": true
+            },
+            "connection": {
+                "cluster": "chat",
+                "reconnect": true
+            },
+            "identity": {
+                "username": "EonfowBoat",
+                "password": "oauth:kvjielei39ewxvdd86bbg5sd2m93do"
+            }
+        },
+        "main": {
+            "options": {
+                "debug": true
+            },
+            "connection": {
+                "cluster": "main",
+                "reconnect": true
+            },
+            "identity": {
+                "username": "EonfowBoat",
+                "password": "oauth:kvjielei39ewxvdd86bbg5sd2m93do"
+            }
+        },
+        "aws": {
+            "options": {
+                "debug": true
+            },
+            "connection": {
+                "cluster": "aws",
+                "reconnect": true
+            },
+            "identity": {
+                "username": "EonfowBoat",
+                "password": "oauth:kvjielei39ewxvdd86bbg5sd2m93do"
+            }
+        },
+        "group": {
+            "options": {
+                "debug": true
+            },
+            "connection": {
+                "cluster": "group",
+                "reconnect": true
+            },
+            "identity": {
+                "username": "EonfowBoat",
+                "password": "oauth:kvjielei39ewxvdd86bbg5sd2m93do"
+            }
+        },
+        "event": {
+            "options": {
+                "debug": true
+            },
+            "connection": {
+                "cluster": "event",
+                "reconnect": true
+            },
+            "identity": {
+                "username": "EonfowBoat",
+                "password": "oauth:kvjielei39ewxvdd86bbg5sd2m93do"
+            }
+        }
+    }
+}

@@ -5,16 +5,9 @@
 
 
 ## Usage
-
-
-
-## Developing
-
+https://eonfow-node-bot-eonfow.c9users.io/bot/
 
 
 ### Tools
 
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+[Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1) and [Cloud9](https://c9.io)

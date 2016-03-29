@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eonfow Boat</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bot.css">
+    
+</head>
+
+<body>
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <div class="ui information attached segment">
+                <div class="ui list">
+                  <div class="item">
+                    <i class="settings icon"></i>
+                    <div class="content">
+                      <div class="header">Info</div>
+                        <div class="description">Information about the bot</div>
+                      <div class="list">
+                        <div class="item">
+                          <i class="settings icon"></i>
+                          <div class="content">
+                            <div class="header">Client</div>
+                            <div class="description">Information about IRC client</div>
+                            <div class="list">
+                              <div class="item">
+                                <i class="setting icon"></i>
+                                <div class="content">
+                                  <div class="header">Connected</div>
+                                  <div class="description" id="connected">Connection to server status</div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <i class="setting icon"></i>
+                                <div class="content">
+                                  <div class="header">Server</div>
+                                  <div class="description" id="server">Server that the bot is connected to</div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <i class="setting icon"></i>
+                                <div class="content">
+                                  <div class="header">Port</div>
+                                  <div class="description" id="port">Port being used inside the server</div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <i class="setting icon"></i>
+                                <div class="content">
+                                  <div class="header">Reason</div>
+                                  <div class="description" id="reason">Last reason for a disconnect</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="setting icon"></i>
+                          <div class="content">
+                            <div class="header">Started</div>
+                            <div class="description" id="started">The bot was started at least once</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="setting icon"></i>
+                          <div class="content">
+                            <div class="header">Ended</div>
+                            <div class="description" id="ended">The bot was ended at least once</div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="folder open icon"></i>
+                          <div class="content">
+                            <div class="header">Channels</div>
+                            <div class="description" id="channels">Channels the bot is connected to</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="ui bottom attached segment">
+                <button class="positive ui button">Start</button>
+                <button class="negative ui disabled button">End</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/jquery-2.2.2.min.js"></script>
+    <script src="/js/bot.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+</body>
+
+</html>

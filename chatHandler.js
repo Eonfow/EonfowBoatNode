@@ -131,10 +131,10 @@ function handleChat(channel, user, message, self){
 					client.timeout(channel.substr(1), user['display-name'], blackListedResp.time);
 					break;
 			}
-		}else if(customCmdResp.is && moment().diff(lastCustomCmd, 's') > cooldown){
+		}else if(customCmdResp.is && (user.mod || moment().diff(lastCustomCmd, 's') > cooldown)){
 			client.say(channel.substr(1), customCmdResp.answer);
 			lastCustomCmd = moment();
-		}else if(moment().diff(lastCmd, 's') > cooldown){
+		}else if(user.mod || moment().diff(lastCmd, 's') > cooldown){
 			testCommand(channel.substr(1), user, message);
 		}
 	}

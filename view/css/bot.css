@@ -1,0 +1,11 @@
+.ui.information.segment{
+    text-align: left;
+}
+
+body>.grid {
+	height: 100%;
+}
+
+.column {
+	max-width: 400px;
+}

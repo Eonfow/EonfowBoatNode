@@ -20,35 +20,19 @@ var resolve = new EventHandler(client, options, statsJson);
 function start(callback){
 	
 	if(!statsJson.client.connected){
-		client.connect();
-		
-		if(!statsJson.started){
-			client.on("connected", function(address, port) {
-			    resolve.connection.open(address, port);
-			});
-		}
+		client.connect().then(function(data){
+			resolve.connection.open(data[0], data[1], callback);
+		});
 	}
-	
-	setTimeout(function() {
-		callback(statsJson);
-	}, 400);
 }
 
 function end(callback){
 	
 	if(statsJson.client.connected){
-		client.disconnect();
-		
-		if(!statsJson.ended){
-			client.on("disconnected", function (reason) {
-				resolve.connection.closed(reason);
-			});
-		}
+		client.disconnect().then(function(data){
+			resolve.connection.closed('Requested disconnect', callback);
+		});
 	}
-	
-	setTimeout(function() {
-		callback(statsJson);
-	}, 400);
 }
 
 client.on("chat", function(channel, user, message, self){

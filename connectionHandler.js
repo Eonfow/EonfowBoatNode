@@ -10,7 +10,7 @@ var ConnectionHandler = function(client, options, statsJson){
     	return joinedChannels;
     }
     
-    this.open = function (address, port) {
+    this.open = function (address, port, callback) {
         statsJson.client = {
             connected: true, 
             reason: 'none', 
@@ -20,9 +20,11 @@ var ConnectionHandler = function(client, options, statsJson){
         
         statsJson.started = true;
         statsJson.channels = joinChannles();
+        
+        callback(statsJson);
 	};
 	
-	this.closed = function (reason) {
+	this.closed = function (reason, callback) {
 	    statsJson.client = {
             connected: false, 
             reason: reason, 
@@ -32,6 +34,8 @@ var ConnectionHandler = function(client, options, statsJson){
 		
 		statsJson.ended = true;
     	statsJson.channels = ['none'];
+    	
+    	callback(statsJson);
     };
     
 };
